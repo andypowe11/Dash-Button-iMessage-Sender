@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages
+env
+./dash2imessage.py
