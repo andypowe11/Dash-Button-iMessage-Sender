@@ -2,8 +2,8 @@
 
 This project takes a standard Amazon Dash button and turns it into a tool for sending a message to
 one of your contacts via iMessage on your iMac or Macbook. I use it to send a reminder to my son to either 1) come and have tea,
-2) get out of bed or 3) pop downstairs (depending on the time of day that the button is pressed). You can
-use it to do what you like.
+2) get out of bed in the morning or 3) pop downstairs (depending on the time of day that the button is pressed). You can
+use it to send whatever messages you like.
 
 There are plenty of example sites for hacking Dash buttons but most seem to be written for either Windows
 or the Raspberry Pi and didn't work quite as expected under MacOS. The instructions below should get you up and
@@ -15,13 +15,13 @@ Follow the instructions for configuring your Dash button but don't complete the 
 a product. Quit before doing this. In doing so, you'll be giving the button enough information to connect to your
 wifi network but leaving it unable to actually buy anything. It'll just flash red a few times when pressed.
 
-If you are using an iPhone, you'll probably also want to disable notifications from the Amazon app,
+If you are using an iPhone, you'll probably also want to disable notifications from the Amazon app -
 otherwise it will keep reminding you to finish the setup process.
 
 ## Install Scapy
 
 Scapy is a powerful interactive packet manipulation program - http://www.secdev.org/projects/scapy/. We're going to use
-its Python library to monitor the network. I needed help with the install (props to @guedou on Twitter)
+its Python library to monitor the network. I needed help with the install of Scapy (props to @guedou on Twitter for his advice)
 because the standard way of doing it didn't work for me on my iMac.
 For a working install, I cloned the scapy-bpf repository from GitHub -
 https://github.com/guedou/scapy-bpf - and installed from there. I think the command was:
@@ -66,4 +66,4 @@ Then do the following:
 
 It's possible that you'll need to reboot at this point but I don't think so. See how you get on.
 
-That's it, pressing the Dash button should now send an appropriate iMessage to your contact.
+That's it! Pressing the Dash button should now send an appropriate iMessage to your contact.
