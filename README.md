@@ -21,14 +21,14 @@ otherwise it will keep reminding you to finish the setup process.
 ## Install Scapy
 
 Scapy is a powerful interactive packet manipulation program - http://www.secdev.org/projects/scapy/ - but we're going to use
-its Python library to monitor the network. I needed help with the install
+its Python library to monitor the network. I needed help with the install (thanks to @guedou on Twitter)
 because the standard way of doing it didn't work for me on my iMac.
-To install it, clone the scapy-bpf repository from GitHub -
-https://github.com/guedou/scapy-bpf - and install from there. I think the command was:
+To install it, I cloned the scapy-bpf repository from GitHub -
+https://github.com/guedou/scapy-bpf - and installed from there. I think the command was:
 
     sudo setup.py install
 
-## Find the button's  MAC address
+## Find the Dash button's MAC address
 
 Run the finddash.py script:
 
@@ -61,6 +61,6 @@ Then do the following:
     sudo cp net.andypowe11.dash2imessage.plist /Library/LaunchDaemons/
     sudo launchctl load /Library/LaunchDaemons/net.andypowe11.dash2imessage.plist
 
-It's possible that you'll need to reboot at this point I'm not sure.
+It's possible that you'll need to reboot at this point but I don't think so. See how you get on.
 
-That's it, pressing the Dash button should now send an iMessage to your contact.
+That's it, pressing the Dash button should now send an appropriate iMessage to your contact.
