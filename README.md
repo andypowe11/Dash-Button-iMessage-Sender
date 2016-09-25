@@ -12,18 +12,18 @@ running on your favorite Apple computer.
 ## Set up the Amazon Dash button
 
 Follow the instructions for configuring your Dash button but don't complete the final step, associating it with
-a product. Quit before doing this step. In doing so, you are giving the button enough information to connect to your
-wifi network but making it unable to actually buy anything. It'll just flash red a few times when pressed.
+a product. Quit before doing this. In doing so, you'll be giving the button enough information to connect to your
+wifi network but leaving it unable to actually buy anything. It'll just flash red a few times when pressed.
 
-If you are using an iPhone, you'll probably want to disable notifications from the Amazon app,
+If you are using an iPhone, you'll probably also want to disable notifications from the Amazon app,
 otherwise it will keep reminding you to finish the setup process.
 
 ## Install Scapy
 
-Scapy is a powerful interactive packet manipulation program - http://www.secdev.org/projects/scapy/ - but we're going to use
-its Python library to monitor the network. I needed help with the install (thanks to @guedou on Twitter)
+Scapy is a powerful interactive packet manipulation program - http://www.secdev.org/projects/scapy/. We're going to use
+its Python library to monitor the network. I needed help with the install (props to @guedou on Twitter)
 because the standard way of doing it didn't work for me on my iMac.
-To install it, I cloned the scapy-bpf repository from GitHub -
+For a working install, I cloned the scapy-bpf repository from GitHub -
 https://github.com/guedou/scapy-bpf - and installed from there. I think the command was:
 
     sudo setup.py install
@@ -34,7 +34,7 @@ Run the finddash.py script:
 
     sudo finddash.py
 
-Ignore the warning about 'No route found for IPv6 destination'. Press the Dash button once - it'll flash red a few times. Its
+Ignore the warning about 'No route found for IPv6 destination'. Press the Dash button once - it'll flash red a few times. The
 MAC address should pop up (possibly with some other messages).
 Repeat a couple of times to check you are seeing the button
 and not something else.
@@ -56,6 +56,9 @@ Press the Dash button again. You should get an iMessage at your configured email
 Assuming everything worked, you now need to configure the script to run as a daemon. Put
 the dash2imessage.py and dash2imessage.sh scripts somewhere permanent and make sure they are executable.
 Edit the net.andypowe11.dash2imessage.plist file, changing the locations as necessary.
+Note that launchd calls the shell script not the Python script - this allows it to set the environment
+correctly before running Python.
+
 Then do the following:
 
     sudo cp net.andypowe11.dash2imessage.plist /Library/LaunchDaemons/
