@@ -56,7 +56,7 @@ Press the Dash button again. You should get an iMessage at your configured email
 Assuming everything worked, you now need to configure the script to run as a daemon. Put
 the dash2imessage.py and dash2imessage.sh scripts somewhere permanent and make sure they are executable.
 Edit the net.andypowe11.dash2imessage.plist file, changing the locations as necessary.
-Note that launchd - http://launchd.info/ - calls the Shell script not the Python script - this allows it to set the environment
+Note that launchd - http://launchd.info/ - calls the Shell script not the Python script. This allows it to set the environment
 correctly before running Python.
 
 Then do the following:
