@@ -39,7 +39,7 @@ MAC address should pop up (possibly with some other messages).
 Repeat a couple of times to check you are seeing the button
 and not something else.
 
-## Configure dash2imessage.py
+## Configure and test dash2imessage.py
 
 Edit the variables at the top of the dash2imessage.py file. Configure the email address of the person you want to
 send an iMessage to and the newly discovered MAC address. Optionally change the filename of the file we'll be using to
@@ -51,7 +51,7 @@ You're good to go. Run the command:
 
 Press the Dash button again. You should get an iMessage at your configured email address a few moments later.
 
-## Run as a daemon
+## Run it as a daemon
 
 Assuming everything worked, you now need to configure the script to run as a daemon. Put
 the dash2imessage.py and dash2imessage.sh scripts somewhere permanent and make sure they are executable.
