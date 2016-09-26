@@ -38,22 +38,23 @@ def arp_monitor_callback(pkt):
     if pkt[ARP].hwsrc == mac:
       now = time.time()
       lt = time.localtime(now)
+      print "Dash button pressed (%s:%s)" % (lt.tm_hour, lt.tm_min)
       # Time to get up
-      if lt.tm_hour == 6 & lt.tm_min >= 58 & lt.tm_min <= 59:
+      if lt.tm_hour == 6 and lt.tm_min >= 55 and lt.tm_min <= 59:
         sendimessage("Rise and shine")
-      elif lt.tm_hour == 7 & lt.tm_min >= 0 & lt.tm_min <= 9:
+      elif lt.tm_hour == 7 and lt.tm_min >= 0 and lt.tm_min <= 10:
         sendimessage("Rise and shine")
       # Time for tea
-      if lt.tm_hour == 18 & lt.tm_min >= 50 & lt.tm_min <= 59:
+      elif lt.tm_hour == 18 and lt.tm_min >= 50 and lt.tm_min <= 59:
         sendimessage("Tea is ready")
-      elif lt.tm_hour == 19 & lt.tm_min >= 0 & lt.tm_min <= 9:
+      elif lt.tm_hour == 19 and lt.tm_min >= 0 and lt.tm_min <= 10:
         sendimessage("Tea is ready")
       # No response in 5 minutes... try again
       elif now - lastpressed() < 300:
         sendimessage("Now")
       # Do not disturb (work and/or sleep)
       # Send the default message (except during office or sleep hours)
-      elif lt.tm_hour >= 16 & lt.tm_hour <= 23:
+      elif lt.tm_hour >= 16 and lt.tm_hour <= 23:
         sendimessage("Can you pop down please?")
       rememberpress()
       return pkt.sprintf("%ARP.hwsrc% Dash button pressed")

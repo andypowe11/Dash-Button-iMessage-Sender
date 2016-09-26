@@ -11,8 +11,8 @@ Then we realised that no-one really wanted to speak. But we still used the buzze
 or dad would sound the buzzer and we'd run downstairs, drooling like Pavlov's dogs!
 
 Of course, now that we all have smart-phones such things seem quaint - we can communicate more flexibly with iMessage,
-Twitter, Facebook Messenger and the rest. But I find myself regularly sending a txt with just the letter 't' to my son at
-around 7pm - he's 2 floors up in the loft conversion so it's the easiest way to tell him that tea is ready.
+Twitter, Facebook Messenger and the rest. But I find myself regularly sending a txt with just the letter 't' to my
+son at around 7pm - he's 2 floors up in the loft conversion so it's the easiest way to tell him that the evening meal is ready.
 
 This project takes a standard Amazon Dash button and turns it into a tool for sending a message to
 one of your contacts via iMessage on your iMac or Macbook. I use it to send a reminder to my son to either 1) come and have tea,
