@@ -17,7 +17,7 @@ around 7pm - he's 2 floors up in the loft conversion so it's the easiest way to 
 This project takes a standard Amazon Dash button and turns it into a tool for sending a message to
 one of your contacts via iMessage on your iMac or Macbook. I use it to send a reminder to my son to either 1) come and have tea,
 2) get out of bed in the morning or 3) pop downstairs (depending on the time of day that the button is pressed). It's
-effectively like the buzzer on those grey boxes. in the first case, the text it sends now says, "Tea is ready" - so
+effectively like the buzzer on those grey boxes. In the first case, the text it sends now says, "Tea is ready" - so
 it's already a massive win over me sending it manually! :-)
 
 You can use it to send whatever messages you like.
